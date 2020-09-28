@@ -1,0 +1,4 @@
+Usage:
+    cktimg.py <encode|decode> <input file> <output file> <arg5 [true|false]>
+    In encode mode, arg 5 is whether or not to save the output image as a bitmap.
+    In decode mode, arg 5 is whether or not to decode bits in reverse order. (If in doubt, choose false)
