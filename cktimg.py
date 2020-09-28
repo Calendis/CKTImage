@@ -306,8 +306,8 @@ def decode(infile, outfile, reverse_arg):
         print("ERROR: input file is not a Kernel Index Sequence image")
         print("Expected length", img_width*img_height*3, "got", len(infile))
         print("Attempt to truncate/pad input file? ")
-        attempt_padding = input("If the expected size is very large, this should NOT be done. Likely you need to"\
-                                "\n convert your image to .bmp before decoding.").lower()
+        attempt_padding = input("If the expected length is very large compared to the real length, this should NOT be done. \
+In this case you likely need to convert your image to .bmp before decoding. [y/n] ").lower()
 
         # Handle empty input
         if attempt_padding == '':
