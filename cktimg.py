@@ -322,7 +322,9 @@ In this case you likely need to convert your image to .bmp before decoding. [y/n
             if excess_bytes < 1:
                 # If bytes are missing, append null bytes
                 infile = bytearray(infile)
+                infile.reverse()
                 infile.extend(bytes(-excess_bytes))
+                infile.reverse()
             else:
                 # If we have too many bytes, just remove them
                 infile = infile[:-excess_bytes]
